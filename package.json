@@ -1,5 +1,7 @@
 {
   "name": "node-twig",
+  "description": "A small Node.js module that lets you render Twig templates using the original PHP implementation.",
+  "keywords": ["twig", "express", "template"],
   "version": "0.0.1",
   "main": "index.js",
   "repository": {
