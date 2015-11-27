@@ -1,3 +1,15 @@
+# Suggested excludes
+.git
+CVS
+.svn
+.hg
+.lock-wscript
+.wafpickle-N
+*.swp
+.DS_Store
+._*
+npm-debug.log
+
 # Exclude all auto-generated files
 .idea
 node_modules

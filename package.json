@@ -2,6 +2,13 @@
   "name": "node-twig",
   "version": "0.0.1",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitmade/node-twig.git"
+  },
+  "bugs": "https://github.com/bitmade/node-twig/issues",
+  "author": "Manuel Moritz-Schliesing <manuel@bitmade.de> (http://bitmade.de)",
+  "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
     "exec-php": "0.0.3",
