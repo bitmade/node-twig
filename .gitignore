@@ -1,0 +1,5 @@
+# Exclude all auto-generated files
+.idea
+node_modules
+php/vendor
+composer.lock
