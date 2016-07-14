@@ -4,7 +4,7 @@
         "vendor-dir": "php/vendor"
     },
     "require": {
-        "twig/twig": "^1.23"
+        "twig/twig": "^1.24"
     },
     "license": "MIT",
     "authors": [
