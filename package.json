@@ -6,7 +6,7 @@
     "express",
     "template"
   ],
-  "version": "0.0.3",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": {
     "type": "git",
