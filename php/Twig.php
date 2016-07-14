@@ -69,7 +69,11 @@ function render($entry, $options = array()) {
 
   $prefix = _getFilepathPrefix($rootDir, $fileInfo['dirname']);
 
-  $loader = new Twig_Loader_Filesystem($rootDir);
+  $loader = new Twig_Loader_Chain(array(
+    new AliasLoader(array(), $options['aliases']),
+    new Twig_Loader_Filesystem($rootDir),
+  ));
+
   // @todo Provide a mechanism to allow custom Twig extensions either via PHP or better JS.
   $twig = new Twig_Environment($loader);
 
