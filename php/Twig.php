@@ -63,6 +63,12 @@ function _invokeExtensions(array $extensions, \Twig_Environment &$twig) {
 function render($entry, $options = array()) {
   $fileInfo = pathinfo($entry);
 
+  $options = array_merge(array(
+    'extensions' => array(),
+    'aliases' => array(),
+    'context' => array(),
+  ), $options);
+
   // Get the root template directory either from the given file or specified in the options.
   $rootDir = array_key_exists('root', $options) && $options['root']
     ? $options['root'] : $fileInfo['dirname'];
