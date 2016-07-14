@@ -75,5 +75,48 @@ function render($entry, $options = array()) {
 
   _invokeExtensions($options['extensions'] ?: array(), $twig);
 
-  return $twig->render($prefix . $fileInfo['basename'], $options['context']);
+  try {
+    return $twig->render($prefix . $fileInfo['basename'], $options['context']);
+  }
+  catch (\Exception $e) {
+    return _createPrettyError($e->getMessage());
+  }
+}
+
+/**
+ * Creates a pretty looking page that displays the error message.
+ *
+ * @param string $message
+ *    The error message to display.
+ *
+ * @return string
+ */
+function _createPrettyError($message = '') {
+  return <<<EOT
+    <html>
+      <head>
+        <title>Twig Error</title>
+        <style>
+          @import 'https://fonts.googleapis.com/css?family=Roboto+Mono';
+          body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0b0c12;
+          }
+          .error {
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-left: 3px solid #a4d233;
+            font-family: "Roboto Mono", monospace;
+            margin: 20px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="error">{$message}</pre>
+      </body>
+    </html>
+EOT;
 }
