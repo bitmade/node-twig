@@ -9,7 +9,7 @@ var twigOptions = {
 
 exports.renderFile = function(entry, options, cb) {
   // Merge the global options with the local ones.
-  options = Object.assign(twigOptions, options);
+  options = Object.assign({}, twigOptions, options);
 
   execPHP('php/Twig.php', null, function (error, php) {
     // Call the callback on error or the render function on success.
