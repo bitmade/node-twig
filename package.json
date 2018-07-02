@@ -17,9 +17,13 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
-    "exec-php": "^0.0.4"
+    "exec-php": "^0.0.4",
+    "husky": "^0.14.3",
+    "prettier": "^1.13.7",
+    "pretty-quick": "^1.6.0"
   },
   "scripts": {
-    "install": "node scripts/install.js"
+    "install": "node scripts/install.js",
+    "precommit": "pretty-quick --staged"
   }
 }
