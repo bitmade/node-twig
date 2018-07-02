@@ -17,8 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
-    "exec-php": "^0.0.4",
-    "trim": "0.0.1"
+    "exec-php": "^0.0.4"
   },
   "scripts": {
     "install": "node scripts/install.js"

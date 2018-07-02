@@ -1,5 +1,4 @@
 var execPHP = require('exec-php');
-var trim = require('trim');
 
 var twigOptions = {
   root: null,
@@ -15,7 +14,7 @@ exports.renderFile = function(entry, options, cb) {
     // Call the callback on error or the render function on success.
     error ? cb(error) : php.render(entry, options, function (error, stdout) {
       // Call the callback with an error or the trimmed output.
-      error ? cb(error) : cb(null, trim(stdout));
+      error ? cb(error) : cb(null, stdout.trim());
     });
   });
 };
